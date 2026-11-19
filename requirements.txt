@@ -1,0 +1,6 @@
+pikepdf
+pypdfium2
+Pillow
+lxml
+Flask
+reportlab

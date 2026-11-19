@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SafeForge - Decontamination Chamber</title>
+<link rel="stylesheet" href="/static/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230A0E0F'/%3E%3Cpath d='M8 16h6M18 16h6' stroke='%23D7FF64' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="1.5" y="1.5" width="29" height="29" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M7 16h7M18 16h7" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><circle cx="16" cy="16" r="1.6" fill="currentColor"/></svg>
+    <span class="word">SafeForge</span>
+    <span class="sub">Decontamination Chamber</span>
+  </div>
+  <div class="stats" aria-live="polite">
+    <div class="chip"><span>Fidelity</span><b id="chip-fid">—</b></div>
+    <div class="chip"><span>Threats neutralised</span><b id="chip-thr">—</b></div>
+    <button id="dl" class="btn" disabled>Download safe file</button>
+  </div>
+</header>
+
+<main class="grid">
+  <section class="panel" aria-labelledby="h1">
+    <h2 id="h1"><i>01</i> Chamber</h2>
+    <div id="chamber" class="chamber" data-state="idle" tabindex="0" role="button" aria-label="Drop a file here or press Enter to choose one">
+      <div class="stripe top"></div><div class="stripe bottom"></div>
+      <div class="drop">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6v24M14 20l10 10 10-10M8 40h32" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <p class="big">Drop a file to sterilize</p>
+        <p class="small">PDF · Office · images · SVG · email · ZIP · media</p>
+        <p id="fname" class="fname"></p>
+      </div>
+      <div class="scan"></div>
+      <div id="tags" class="tags"></div>
+      <div class="door l"><span class="bolts"></span></div>
+      <div class="door r"><span class="bolts"></span></div>
+      <div id="stamp" class="stamp" aria-hidden="true"></div>
+      <input id="file" type="file" hidden>
+    </div>
+    <p id="status" class="status" role="status" aria-live="polite">Chamber ready. Nothing is trusted; everything is rebuilt.</p>
+    <fieldset class="modes"><legend>Mode</legend>
+      <label><input type="radio" name="mode" value="balanced" checked><span><b>Balanced</b><small>rebuild, keep text</small></span></label>
+      <label><input type="radio" name="mode" value="paranoid"><span><b>Paranoid</b><small>image-only output</small></span></label>
+      <label><input type="radio" name="mode" value="metadata_only"><span><b>Metadata only</b><small>keeps active content</small></span></label>
+    </fieldset>
+    <label id="keyrow" class="key" hidden>API key <input id="apikey" type="password" autocomplete="off" placeholder="X-API-Key"></label>
+  </section>
+
+  <section class="panel" aria-labelledby="h2">
+    <h2 id="h2"><i>02</i> Forensic report</h2>
+    <div id="report"><div class="empty"><p class="serif">No sample in the chamber.</p><p>Everything removed from a file is listed here, with the object it came from and why it mattered.</p></div></div>
+  </section>
+
+  <section class="panel" aria-labelledby="h3">
+    <h2 id="h3"><i>03</i> Before / after</h2>
+    <div id="compare"><div class="empty"><p class="serif">Awaiting a render.</p><p>Rendered pages and images are compared pixel by pixel. Differences are highlighted red.</p></div></div>
+  </section>
+</main>
+
+<footer class="api">
+  <span class="label">Integrate in one call</span>
+  <pre><code id="curl"></code></pre>
+</footer>
+<script src="/static/app.js"></script>
+</body>
+</html>

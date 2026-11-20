@@ -1,0 +1,18 @@
+[project]
+name = "safeforge"
+version = "1.0.0"
+description = "Zero-trust file sanitizer: Content Disarm & Reconstruction (CDR) for PDF, Office, images, SVG, email, archives, media"
+requires-python = ">=3.10"
+dependencies = ["pikepdf>=9.0", "pypdfium2>=4.30", "Pillow>=10.3", "lxml>=5.0", "Flask>=3.0", "reportlab>=4.0"]
+
+[project.scripts]
+safeforge = "safeforge.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["safeforge*"]
+
+[tool.setuptools.package-data]
+safeforge = ["static/*", "static/fonts/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

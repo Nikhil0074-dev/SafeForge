@@ -1,0 +1,20 @@
+# UNTESTED in the build environment. Hardened runtime for a service that parses hostile files.
+services:
+  safeforge:
+    build: .
+    ports: ["8080:8080"]
+    environment:
+      SAFEFORGE_API_KEYS: "${SAFEFORGE_API_KEYS:?set a key}"
+      SAFEFORGE_SIGNING_KEY: "${SAFEFORGE_SIGNING_KEY:?set a signing key}"
+      SAFEFORGE_TTL: "86400"
+    volumes: ["sfdata:/data"]
+    read_only: true
+    tmpfs: ["/tmp:size=512m,mode=1777"]
+    cap_drop: ["ALL"]
+    security_opt: ["no-new-privileges:true"]
+    pids_limit: 256
+    mem_limit: 2g
+    # For gVisor isolation install runsc and uncomment:
+    # runtime: runsc
+volumes:
+  sfdata: {}

@@ -1,4 +1,4 @@
-# SafeForge — Zero-Trust File Sanitizer (CDR)
+# SafeForge - Zero-Trust File Sanitizer (CDR)
 
 > Don't ask *"is this file bad?"* - ask *"what is the business value in it?"*, keep only that, and build a brand-new file.
 
@@ -61,7 +61,7 @@ Set `SAFEFORGE_API_KEYS=k1,k2` to require `X-API-Key`; `SAFEFORGE_SIGNING_KEY`, 
 `remove_active`, `remove_metadata`, `remove_hidden`, `flatten`, `scrub_lsb`, `keep_links`, `strip_email_links`, `dpi`
 (50-600), `block_types`, `max_depth`. Unknown keys and wrong types are rejected with `400`.
 
-## Modes — read this before using `metadata_only`
+## Modes - read this before using `metadata_only`
 * **balanced** - rebuild, keep selectable text and layout (~100 % fidelity on tested files).
 * **paranoid** - image-only PDF (Office files go disarm → LibreOffice → rasterise). No text layer. Randomises image LSBs.
 * **metadata_only** - strips metadata **and nothing else**. Scripts and macros remain, and the report says so.
